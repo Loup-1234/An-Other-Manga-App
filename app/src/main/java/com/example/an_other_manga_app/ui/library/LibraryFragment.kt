@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app.ui.library
+package com.example.an_other_manga_app.ui.browse
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,7 +21,7 @@ class LibraryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val libraryViewModel =
-            ViewModelProvider(this)[LibraryViewModel::class.java]
+            ViewModelProvider(this)[BrowseViewModel::class.java]
 
         _binding = FragmentLibraryBinding.inflate(inflater, container, false)
         val root: View = binding.root
