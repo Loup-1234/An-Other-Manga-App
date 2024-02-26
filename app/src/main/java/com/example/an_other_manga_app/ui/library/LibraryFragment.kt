@@ -20,14 +20,14 @@ class LibraryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(LibraryViewModel::class.java)
+        val libraryViewModel =
+            ViewModelProvider(this)[LibraryViewModel::class.java]
 
         _binding = FragmentLibraryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textLibrary
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        libraryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
