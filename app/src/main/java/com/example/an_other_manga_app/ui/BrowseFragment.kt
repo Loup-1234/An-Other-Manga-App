@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app.ui.browse
+package com.example.an_other_manga_app.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.an_other_manga_app.databinding.FragmentBrowseBinding
+import com.example.an_other_manga_app.viewmodel.BrowseViewModel
 
 class BrowseFragment : Fragment() {
 

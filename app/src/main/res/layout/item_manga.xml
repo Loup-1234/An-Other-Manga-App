@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="5dp"
+    android:layout_margin="15dp"
     app:cardCornerRadius="15dp"
     app:cardElevation="5dp"
     tools:ignore="MissingDefaultResource">
@@ -29,7 +29,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/item_card_text"
+            android:id="@+id/item_card_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app.ui.browse
+package com.example.an_other_manga_app.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
