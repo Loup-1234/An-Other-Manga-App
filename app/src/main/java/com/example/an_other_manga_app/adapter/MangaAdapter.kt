@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.an_other_manga_app.R
-import com.example.an_other_manga_app.model.MangaItem
+import com.example.an_other_manga_app.viewmodel.MangaItem
 
 class MangaAdapter(private val context: Context, private val dataList: List<MangaItem>) : BaseAdapter() {
 

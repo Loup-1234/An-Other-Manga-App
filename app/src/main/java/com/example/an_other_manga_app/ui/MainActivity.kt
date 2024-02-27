@@ -27,14 +27,11 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        // Set up ActionBar with Navigation
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        // Set up BottomNavigationView with Navigation
         binding.navView.setupWithNavController(navController)
     }
 
-    // Handle Up navigation
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         return navController.navigateUp() || super.onSupportNavigateUp()
