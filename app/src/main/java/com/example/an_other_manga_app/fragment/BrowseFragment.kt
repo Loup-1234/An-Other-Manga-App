@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app.ui
+package com.example.an_other_manga_app.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

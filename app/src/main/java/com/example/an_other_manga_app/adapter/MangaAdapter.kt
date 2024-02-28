@@ -1,55 +1,36 @@
 package com.example.an_other_manga_app.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.an_other_manga_app.R
-import com.example.an_other_manga_app.viewmodel.MangaItem
+import com.example.an_other_manga_app.model.MangaItem
+class MangaAdapter(private val dataList: List<MangaItem>) : RecyclerView.Adapter<MangaAdapter.MangaViewHolder>() {
 
-class MangaAdapter(private val context: Context, private val dataList: List<MangaItem>) : BaseAdapter() {
-
-    override fun getCount(): Int {
-        return dataList.size
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MangaViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_manga, parent, false)
+        return MangaViewHolder(view)
     }
 
-    override fun getItem(position: Int): Any {
-        return dataList[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view: View
-        val viewHolder: ViewHolder
-
-        if (convertView == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.item_manga, parent, false)
-            viewHolder = ViewHolder(view)
-            view.tag = viewHolder
-        } else {
-            view = convertView
-            viewHolder = view.tag as ViewHolder
-        }
-
-        val item = getItem(position) as MangaItem
-        viewHolder.titleTextView.text = item.title
-        Glide.with(context)
+    override fun onBindViewHolder(holder: MangaViewHolder, position: Int) {
+        val item = dataList[position]
+        holder.titleTextView.text = item.title
+        holder.descriptionTextView.text = item.description
+        Glide.with(holder.itemView.context)
             .load(item.imageUrl)
             .placeholder(R.drawable.extreme_violence)
-            .into(viewHolder.imageView)
-
-        return view
+            .into(holder.imageView)
     }
 
-    private class ViewHolder(view: View) {
-        val titleTextView: TextView = view.findViewById(R.id.item_card_title)
-        val imageView: ImageView = view.findViewById(R.id.item_card_image)
+    override fun getItemCount() = dataList.size
+
+    inner class MangaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val titleTextView: TextView = itemView.findViewById(R.id.item_card_title)
+        val descriptionTextView: TextView = itemView.findViewById(R.id.item_card_description)
+        val imageView: ImageView = itemView.findViewById(R.id.item_card_image)
     }
 }
