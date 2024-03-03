@@ -22,7 +22,7 @@ class MangaAdapter(private val dataList: List<MangaItem>) : RecyclerView.Adapter
         holder.descriptionTextView.text = item.description
         Glide.with(holder.itemView.context)
             .load(item.imageUrl)
-            .placeholder(R.drawable.extreme_violence)
+            .placeholder(R.mipmap.extreme_violence)
             .into(holder.imageView)
     }
 
