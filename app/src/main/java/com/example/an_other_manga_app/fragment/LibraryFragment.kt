@@ -24,7 +24,7 @@ class LibraryFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_library, container, false)
 
-        viewModel = ViewModelProvider(this).get(LibraryViewModel::class.java)
+        viewModel = ViewModelProvider(this)[LibraryViewModel::class.java]
 
         val sampleData = viewModel.getSampleData()
 
