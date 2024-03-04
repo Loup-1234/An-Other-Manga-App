@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app.fragment
+package com.example.an_other_manga_app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
