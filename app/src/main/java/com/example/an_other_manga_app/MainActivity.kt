@@ -45,13 +45,16 @@ class MainActivity : ComponentActivity() {
                                 label = { Text(item.label) },
                                 selected = selectedItem == index,
                                 onClick = {
-                                    selectedItem = index
-                                    val destination = if (index == 0) "library" else "browse"
-                                    navController.navigate(destination)
+                                    if (selectedItem != index) {
+                                        selectedItem = index
+                                        val destination = if (index == 0) "library" else "browse"
+                                        navController.navigate(destination)
+                                    }
                                 }
                             )
                         }
                     }
+
                 }
             }
         }
