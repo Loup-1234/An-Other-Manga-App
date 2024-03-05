@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">An Other Manga App</string>
+    <string name="library">Library</string>
+    <string name="browse">Browse</string>
 </resources>
