@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBarItem
@@ -18,7 +15,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 
@@ -40,10 +36,7 @@ class MainActivity : ComponentActivity() {
                 var selectedItem by remember { mutableIntStateOf(0) }
 
                 Box(modifier = Modifier.fillMaxSize()) {
-                    Column {
-                        AppNavigation(navController = navController)
-                        Spacer(modifier = Modifier.height(56.dp))
-                    }
+                    AppNavigation(navController = navController)
 
                     BottomAppBar {
                         items.forEachIndexed { index, item ->
@@ -61,6 +54,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                     }
+
                 }
             }
         }
