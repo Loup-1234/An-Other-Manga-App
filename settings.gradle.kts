@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "An-Other-Manga-App"
+rootProject.name = "An Other Manga App"
 include(":app")
  
