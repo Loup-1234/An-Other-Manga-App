@@ -41,7 +41,11 @@ class MainActivity : ComponentActivity() {
                     selected = selectedItem == index,
                     onClick = {
                         selectedItem = index
-                        navController.navigate(if (index == 0) "library_screen_route" else "browse_screen_route")
+                        if (index == 0) {
+                            navController.navigate("library_screen_route")
+                        } else if (index == 1) {
+                            navController.navigate("browse_screen_route")
+                        }
                     }
                 )
             }
