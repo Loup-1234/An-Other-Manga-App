@@ -3,10 +3,12 @@ package com.example.an_other_manga_app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,7 +46,7 @@ fun MainScreen() {
 
         var selectedItem by remember { mutableIntStateOf(0) }
 
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxSize().background(color = colorScheme.surface)) {
             AppNavigation(navController = navController)
 
             BottomAppBar (modifier = Modifier.align(Alignment.BottomCenter)){
