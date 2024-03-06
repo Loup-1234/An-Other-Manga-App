@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app
+package com.example.an_other_manga_app.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
