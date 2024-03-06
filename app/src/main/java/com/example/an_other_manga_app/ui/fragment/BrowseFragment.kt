@@ -1,4 +1,4 @@
-package com.example.an_other_manga_app.ui.library
+package com.example.an_other_manga_app.ui.fragment
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -13,14 +13,14 @@ import androidx.compose.ui.unit.sp
 import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 
 @Composable
-fun LibraryFragment() {
+fun BrowseFragment() {
     AnOtherMangaAppTheme {
         Box(
             modifier = Modifier.fillMaxSize().background(color = colorScheme.surface),
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "Library Fragment",
+                text = "Browse Fragment",
                 fontSize = 24.sp,
                 textAlign = TextAlign.Center,
                 color = colorScheme.secondary

@@ -32,10 +32,12 @@ fun NavBar() {
 
     var selectedItem by remember { mutableIntStateOf(0) }
 
-    Box(modifier = Modifier.fillMaxSize().background(color = MaterialTheme.colorScheme.surface)) {
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .background(color = MaterialTheme.colorScheme.surface)) {
         AppNavigation(navController = navController)
 
-        BottomAppBar (modifier = Modifier.align(Alignment.BottomCenter)){
+        BottomAppBar(modifier = Modifier.align(Alignment.BottomCenter)) {
             items.forEachIndexed { index, item ->
                 NavigationBarItem(
                     icon = {
