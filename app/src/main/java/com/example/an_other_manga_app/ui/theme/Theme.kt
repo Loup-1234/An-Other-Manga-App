@@ -46,7 +46,7 @@ fun AnOtherMangaAppTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as ComponentActivity).window
-            window.statusBarColor = colorScheme.surfaceVariant.toArgb()
+            window.statusBarColor = colorScheme.primary.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
