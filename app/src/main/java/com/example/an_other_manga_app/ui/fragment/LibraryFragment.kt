@@ -24,44 +24,47 @@ import com.example.an_other_manga_app.R
 
 @Composable
 fun LibraryFragment() {
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        contentPadding = PaddingValues(8.dp)
-    ) {
-        items(1000) { index ->
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(color = colorScheme.surface),
-                contentAlignment = Alignment.Center ) {
-                Card(
-                    colors = CardDefaults.cardColors(
-                        containerColor = colorScheme.surfaceVariant,
-                    ),
+    Box(modifier = Modifier.padding(bottom = 75.dp)) {
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            contentPadding = PaddingValues(8.dp)
+        ) {
+            items(10) { index ->
+                Box(
                     modifier = Modifier
-                        .width(200.dp)
-                        .height(250.dp)
-                        .padding(8.dp)
+                        .fillMaxSize()
+                        .background(color = colorScheme.surface),
+                    contentAlignment = Alignment.Center
                 ) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.BottomCenter
+                    Card(
+                        colors = CardDefaults.cardColors(
+                            containerColor = colorScheme.surfaceVariant,
+                        ),
+                        modifier = Modifier
+                            .width(200.dp)
+                            .height(250.dp)
+                            .padding(8.dp)
                     ) {
-                        Image(
-                            painter = painterResource(id = R.mipmap.extreme_violence),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .padding(8.dp)
-                                .fillMaxSize()
-                                .align(Alignment.Center)
-                        )
-                        Text(
-                            text = "Manga $index",
-                            modifier = Modifier
-                                .padding(8.dp),
-                            textAlign = TextAlign.Center,
-                            color = colorScheme.secondary
-                        )
+                        Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.BottomCenter
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.mipmap.extreme_violence),
+                                contentDescription = null,
+                                modifier = Modifier
+                                    .padding(8.dp)
+                                    .fillMaxSize()
+                                    .align(Alignment.Center)
+                            )
+                            Text(
+                                text = "Manga $index",
+                                modifier = Modifier
+                                    .padding(8.dp),
+                                textAlign = TextAlign.Center,
+                                color = colorScheme.secondary
+                            )
+                        }
                     }
                 }
             }

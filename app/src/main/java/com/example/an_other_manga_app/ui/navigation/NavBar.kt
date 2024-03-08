@@ -38,9 +38,11 @@ fun NavBar() {
     var selectedItem by remember { mutableIntStateOf(0) }
 
     // 4. Contenu principal
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .background(color = MaterialTheme.colorScheme.surface)) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = MaterialTheme.colorScheme.surface)
+    ) {
 
         AppNavigation(navController = navController)
 
@@ -62,11 +64,11 @@ fun NavBar() {
                     // 7. Mettre à jour l'élément sélectionné
                     selected = selectedItem == index,
                     onClick = {
-                        if(selectedItem != index) {
+                        if (selectedItem != index) {
                             selectedItem = index
 
                             // 8. Naviguer
-                            val destination = if(index == 0) "library" else "browse"
+                            val destination = if (index == 0) "library" else "browse"
                             navController.navigate(destination)
                         }
                     }
