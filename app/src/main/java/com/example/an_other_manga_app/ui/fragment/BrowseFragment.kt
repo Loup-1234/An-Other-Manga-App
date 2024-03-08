@@ -22,7 +22,7 @@ fun BrowseFragment() {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "Browse Fragment",
+                text = "Work in progress",
                 fontSize = 24.sp,
                 textAlign = TextAlign.Center,
                 color = colorScheme.secondary
