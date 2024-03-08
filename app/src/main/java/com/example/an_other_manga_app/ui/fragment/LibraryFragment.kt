@@ -49,7 +49,7 @@ fun LibraryFragment(navController: NavHostController) {
                             containerColor = colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable {navController.navigate("manga")}
+                            .clickable { navController.navigate("manga") }
                             .width(200.dp)
                             .height(250.dp)
                             .padding(8.dp)
@@ -60,7 +60,7 @@ fun LibraryFragment(navController: NavHostController) {
                         ) {
                             Image(
                                 painter = painterResource(id = R.mipmap.extreme_violence),
-                                contentDescription = null,
+                                contentDescription = "Extreme Violence",
                                 modifier = Modifier
                                     .padding(8.dp)
                                     .fillMaxSize()
@@ -90,7 +90,7 @@ fun generateInfiniteListOfItems(): List<Item> {
 
     LaunchedEffect(Unit) {
         var index = 0
-        while(true) {
+        while (true) {
             items.add(Item(index++))
             delay(500)
         }
