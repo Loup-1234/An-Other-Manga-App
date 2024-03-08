@@ -16,7 +16,9 @@ import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 fun BrowseFragment() {
     AnOtherMangaAppTheme {
         Box(
-            modifier = Modifier.fillMaxSize().background(color = colorScheme.surface),
+            modifier = Modifier
+                .fillMaxSize()
+                .background(color = colorScheme.surface),
             contentAlignment = Alignment.Center
         ) {
             Text(
