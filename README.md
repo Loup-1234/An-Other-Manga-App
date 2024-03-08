@@ -1,6 +1,6 @@
 <h1>An app that allows you to switch timelines at your convenience!</h1>
 
-<p>This project is created by a beginner!
+<p>This project is created by a beginner for learning purposes!
 
 The reading feature is currently under development.</p>
 
