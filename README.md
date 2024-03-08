@@ -1,6 +1,6 @@
 <h1>An app that allows you to switch timelines at your convenience!</h1>
 
-<p>This is a biginer project!
+<p>This is a biginner project!
 
 The reading feature is currently under development.</p>
 
