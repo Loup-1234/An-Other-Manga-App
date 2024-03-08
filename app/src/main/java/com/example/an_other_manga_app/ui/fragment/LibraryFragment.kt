@@ -24,7 +24,6 @@ import com.example.an_other_manga_app.R
 
 @Composable
 fun LibraryFragment() {
-    println("This is a debug message")
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         contentPadding = PaddingValues(8.dp)
@@ -34,15 +33,14 @@ fun LibraryFragment() {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(color = colorScheme.surface),
-                contentAlignment = Alignment.Center
-            ) {
+                contentAlignment = Alignment.Center ) {
                 Card(
                     colors = CardDefaults.cardColors(
                         containerColor = colorScheme.surfaceVariant,
                     ),
                     modifier = Modifier
-                        .width(maxOf(200.dp, 250.dp))
-                        .height(350.dp)
+                        .width(200.dp)
+                        .height(250.dp)
                         .padding(8.dp)
                 ) {
                     Box(
