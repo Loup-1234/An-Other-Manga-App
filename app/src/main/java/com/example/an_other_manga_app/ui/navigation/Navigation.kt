@@ -11,7 +11,7 @@ import com.example.an_other_manga_app.ui.fragment.MangaFragment
 @Composable
 fun AppNavigation(navController: NavHostController) {
     NavHost(navController, startDestination = "library") {
-        composable("library") { LibraryFragment() }
+        composable("library") { LibraryFragment(navController) }
         composable("browse") { BrowseFragment() }
         composable("manga") { MangaFragment() }
     }

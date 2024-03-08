@@ -21,12 +21,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.rememberNavController
+import androidx.navigation.NavHostController
 import com.example.an_other_manga_app.R
 
 @Composable
-fun LibraryFragment() {
-    val navController = rememberNavController()
+fun LibraryFragment(navController: NavHostController) {
     Box(modifier = Modifier.padding(bottom = 80.dp)) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
