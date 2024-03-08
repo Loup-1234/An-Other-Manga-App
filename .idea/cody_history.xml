@@ -5,7 +5,7 @@
       <list>
         <chat>
           <accountId value="VXNlcjozMzU2OTM=" />
-          <internalId value="739ed151-a7cf-4c47-b08a-6f44b2dcba56" />
+          <internalId value="922b401c-a0ca-4913-8295-619b1d209d9e" />
           <llm>
             <llm>
               <model value="anthropic/claude-2.0" />
@@ -13,6 +13,19 @@
               <title value="Claude 2.0" />
             </llm>
           </llm>
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="I want NavBar to desaper when MangaFragment is showing" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value=" To make the NavBar disappear when the MangaFragment is showing, you can use a modifier on the NavBar composable that checks the current navigation route and only shows the NavBar if it's not on the &quot;manga&quot; route:&#10;&#10;```kt&#10;@Composable&#10;fun NavBar() {&#10;&#10;  // NavController and other NavBar code&#10;&#10;  Box(&#10;    modifier = Modifier&#10;      .fillMaxSize()&#10;      .background(color = MaterialTheme.colorScheme.surface)&#10;  ) {&#10;&#10;    AppNavigation(navController = navController)&#10;&#10;    if (navController.currentDestination?.route != &quot;manga&quot;) {&#10;      BottomAppBar(modifier = Modifier.align(Alignment.BottomCenter)) {&#10;        // NavBar items &#10;      }&#10;    }&#10;&#10;  }&#10;&#10;}&#10;```&#10;&#10;So it will check if the current route is &quot;manga&quot;, and if so, not show the BottomAppBar. Otherwise, it will display the NavBar as normal." />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-03-08T17:44:13.547053" />
         </chat>
       </list>
     </chats>
