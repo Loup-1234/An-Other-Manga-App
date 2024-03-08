@@ -22,23 +22,34 @@ import com.example.an_other_manga_app.R
 
 @Composable
 fun NavBar() {
+
+    // 1. Définir le contrôleur de navigation
     val navController = rememberNavController()
+
+    // 2. Définir les éléments de la barre de navigation
     val items = remember {
         listOf(
-            BottomNavItem(R.drawable.ic_library_24dp, "Library"),
-            BottomNavItem(R.drawable.ic_browse_24dp, "Browse")
+            BottomNavItem(R.drawable.ic_library_24dp, "Bibliothèque"),
+            BottomNavItem(R.drawable.ic_browse_24dp, "Parcourir")
         )
     }
 
+    // 3. Suivre l'élément sélectionné
     var selectedItem by remember { mutableIntStateOf(0) }
 
+    // 4. Contenu principal
     Box(modifier = Modifier
         .fillMaxSize()
         .background(color = MaterialTheme.colorScheme.surface)) {
+
         AppNavigation(navController = navController)
 
+        // 5. Barre de navigation inférieure
         BottomAppBar(modifier = Modifier.align(Alignment.BottomCenter)) {
+
+            // 6. Éléments de navigation
             items.forEachIndexed { index, item ->
+
                 NavigationBarItem(
                     icon = {
                         Icon(
@@ -47,11 +58,15 @@ fun NavBar() {
                         )
                     },
                     label = { Text(item.label) },
+
+                    // 7. Mettre à jour l'élément sélectionné
                     selected = selectedItem == index,
                     onClick = {
-                        if (selectedItem != index) {
+                        if(selectedItem != index) {
                             selectedItem = index
-                            val destination = if (index == 0) "library" else "browse"
+
+                            // 8. Naviguer
+                            val destination = if(index == 0) "library" else "browse"
                             navController.navigate(destination)
                         }
                     }
