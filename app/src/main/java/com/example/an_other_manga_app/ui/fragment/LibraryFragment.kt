@@ -2,6 +2,7 @@ package com.example.an_other_manga_app.ui.fragment
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,11 +21,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 import com.example.an_other_manga_app.R
 
 @Composable
 fun LibraryFragment() {
-    Box(modifier = Modifier.padding(bottom = 75.dp)) {
+    val navController = rememberNavController()
+    Box(modifier = Modifier.padding(bottom = 80.dp)) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             contentPadding = PaddingValues(8.dp)
@@ -41,6 +44,7 @@ fun LibraryFragment() {
                             containerColor = colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
+                            .clickable {navController.navigate("manga")}
                             .width(200.dp)
                             .height(250.dp)
                             .padding(8.dp)
