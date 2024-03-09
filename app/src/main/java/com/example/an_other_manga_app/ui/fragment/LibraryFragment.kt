@@ -32,7 +32,7 @@ import kotlinx.coroutines.delay
 @Composable
 fun LibraryFragment(navController: NavHostController) {
     val items = generateInfiniteListOfItems()
-    Box(modifier = Modifier.padding(bottom = 80.dp)) {
+    Box {
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             contentPadding = PaddingValues(8.dp)
