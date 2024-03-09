@@ -27,52 +27,56 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.an_other_manga_app.R
+import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 import kotlinx.coroutines.delay
 
 @Composable
 fun LibraryFragment(navController: NavHostController) {
-    val items = generateInfiniteListOfItems()
-    Box {
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-            contentPadding = PaddingValues(8.dp)
-        ) {
-            items(items) { index ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(color = colorScheme.surface),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Card(
-                        colors = CardDefaults.cardColors(
-                            containerColor = colorScheme.surfaceVariant,
-                        ),
+    AnOtherMangaAppTheme {
+        val items = generateInfiniteListOfItems()
+
+        Box {
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                contentPadding = PaddingValues(8.dp)
+            ) {
+                items(items) { index ->
+                    Box(
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
-                            .width(200.dp)
-                            .height(250.dp)
-                            .padding(8.dp)
+                            .fillMaxSize()
+                            .background(color = colorScheme.surface),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.BottomCenter
+                        Card(
+                            colors = CardDefaults.cardColors(
+                                containerColor = colorScheme.surfaceVariant,
+                            ),
+                            modifier = Modifier
+                                .clickable { navController.navigate("manga") }
+                                .width(200.dp)
+                                .height(250.dp)
+                                .padding(8.dp)
                         ) {
-                            Image(
-                                painter = painterResource(id = R.mipmap.extreme_violence),
-                                contentDescription = "Extreme Violence",
-                                modifier = Modifier
-                                    .padding(8.dp)
-                                    .fillMaxSize()
-                                    .align(Alignment.Center)
-                            )
-                            Text(
-                                text = "Manga $index",
-                                modifier = Modifier
-                                    .padding(8.dp),
-                                textAlign = TextAlign.Center,
-                                color = colorScheme.secondary
-                            )
+                            Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.BottomCenter
+                            ) {
+                                Image(
+                                    painter = painterResource(id = R.mipmap.extreme_violence),
+                                    contentDescription = "Extreme Violence",
+                                    modifier = Modifier
+                                        .padding(8.dp)
+                                        .fillMaxSize()
+                                        .align(Alignment.Center)
+                                )
+                                Text(
+                                    text = "Manga $index",
+                                    modifier = Modifier
+                                        .padding(8.dp),
+                                    textAlign = TextAlign.Center,
+                                    color = colorScheme.secondary
+                                )
+                            }
                         }
                     }
                 }
