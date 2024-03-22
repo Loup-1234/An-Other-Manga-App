@@ -58,10 +58,7 @@ fun TopSearchBar() {
                     searchQuery.value = it
                 },
                 placeholder = {
-                    Text(
-                        text = "Search",
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
+                    Text(text = "Search")
                 },
                 modifier = Modifier
                     .fillMaxWidth()

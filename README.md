@@ -4,14 +4,14 @@ This project is created by a beginner for learning purposes!
 - [x] NavBar
 - [ ] Settings
     - [ ] Customization
-    - [ ] Traking
+    - [ ] Tracking
     - [ ] Advance settings
 - [ ] Library
     - [x] Clickable Cards
     - [ ] Search bar
     - [ ] Organization
 - [ ] Manga info pages
-    - [ ] Some usefull buttons
+    - [ ] Some usefully buttons
     - [ ] Timelines visualisation
 - [ ] Reading features
     - [ ] Timelines navigation
@@ -22,9 +22,9 @@ This project is created by a beginner for learning purposes!
 - [ ] Browse
     - [ ] Search bar
     - [ ] Filters
-    - [ ] Recommandations
+    - [ ] Recommendations
 - [ ] Stats
 - [ ] About
-- [ ] Icognito mode
+- [ ] Incognito mode
 
 ![New Manga Reader Concept](https://github.com/Loup-1234/An-Other-Manga-App/assets/86883476/1f3808b7-6d53-4f49-b023-eeb88261dfba)

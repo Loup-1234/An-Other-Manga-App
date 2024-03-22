@@ -30,7 +30,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.an_other_manga_app.R
 import com.example.an_other_manga_app.ui.navigation.SettingsButton
@@ -52,7 +51,7 @@ fun LibraryFragment(navController: NavHostController) {
                     Row(modifier = Modifier.fillMaxWidth()) {
                         TopSearchBar()
                         Spacer(modifier = Modifier.width(8.dp))
-                        SettingsButton(NavController)
+                        SettingsButton(navController)
                     }
                 }
 
