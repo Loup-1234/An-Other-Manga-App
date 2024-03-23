@@ -24,8 +24,8 @@ fun BottomNavBar(
         var selectedItem by remember { mutableStateOf(currentRoute) }
 
         BottomAppBar {
-            items.forEachIndexed { index, item ->
-                val route = if (index == 0) "library" else "browse"
+            items.forEach { item ->
+                val route = item.label.lowercase()
 
                 NavigationBarItem(
                     icon = {
