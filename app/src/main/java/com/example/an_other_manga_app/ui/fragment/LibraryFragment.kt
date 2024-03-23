@@ -6,10 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -32,7 +29,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.an_other_manga_app.R
-import com.example.an_other_manga_app.ui.navigation.SettingsButton
 import com.example.an_other_manga_app.ui.navigation.TopSearchBar
 import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 import kotlinx.coroutines.delay
@@ -47,13 +43,7 @@ fun LibraryFragment(navController: NavHostController) {
                 columns = GridCells.Fixed(2),
                 contentPadding = PaddingValues(8.dp)
             ) {
-                item(span = { GridItemSpan(2) }) {
-                    Row(modifier = Modifier.fillMaxWidth()) {
-                        TopSearchBar()
-                        Spacer(modifier = Modifier.width(8.dp))
-                        SettingsButton()
-                    }
-                }
+                item(span = { GridItemSpan(2) }) { TopSearchBar() }
 
                 items(items) { index ->
                     Box(
