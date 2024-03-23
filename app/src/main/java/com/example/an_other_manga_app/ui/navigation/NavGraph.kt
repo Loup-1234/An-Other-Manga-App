@@ -12,7 +12,7 @@ import com.example.an_other_manga_app.ui.fragment.SettingsFragment
 import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 
 @Composable
-fun NavGraph(navController: NavHostController, contentPadding: PaddingValues) {
+fun NavGraph(navController: NavHostController, @Suppress("UNUSED_PARAMETER") contentPadding: PaddingValues) {
     AnOtherMangaAppTheme {
         NavHost(navController, startDestination = "library") {
             composable("library") { LibraryFragment(navController) }
