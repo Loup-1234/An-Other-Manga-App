@@ -5,12 +5,11 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.an_other_manga_app.R
 
 @Composable
-fun SettingsButton(navController: NavHostController) {
+fun SettingsButton() {
 
     val navigation = rememberNavController()
 

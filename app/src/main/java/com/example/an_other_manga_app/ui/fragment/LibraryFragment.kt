@@ -51,7 +51,7 @@ fun LibraryFragment(navController: NavHostController) {
                     Row(modifier = Modifier.fillMaxWidth()) {
                         TopSearchBar()
                         Spacer(modifier = Modifier.width(8.dp))
-                        SettingsButton(navController)
+                        SettingsButton()
                     }
                 }
 

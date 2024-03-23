@@ -17,19 +17,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
 import com.example.an_other_manga_app.ui.navigation.SettingsButton
 import com.example.an_other_manga_app.ui.navigation.TopSearchBar
 import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 
 @Composable
-fun BrowseFragment(navController: NavHostController) {
+fun BrowseFragment() {
     AnOtherMangaAppTheme {
         Column(modifier = Modifier.padding(8.dp)) {
             Row(modifier = Modifier.fillMaxWidth()) {
                 TopSearchBar()
                 Spacer(modifier = Modifier.width(8.dp))
-                SettingsButton(navController)
+                SettingsButton()
             }
 
             Box(

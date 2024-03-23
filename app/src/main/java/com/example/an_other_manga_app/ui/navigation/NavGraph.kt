@@ -15,7 +15,7 @@ fun NavGraph(navController: NavHostController) {
     AnOtherMangaAppTheme {
         NavHost(navController, startDestination = "library") {
             composable("library") { LibraryFragment(navController) }
-            composable("browse") { BrowseFragment(navController) }
+            composable("browse") { BrowseFragment() }
             composable("manga") { MangaFragment() }
             composable("settings") { SettingsFragment() }
         }
