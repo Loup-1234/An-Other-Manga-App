@@ -42,7 +42,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -83,7 +83,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -109,7 +109,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -133,7 +133,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -157,7 +157,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -186,7 +186,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -219,7 +219,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -244,7 +244,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("manga") }
+                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
