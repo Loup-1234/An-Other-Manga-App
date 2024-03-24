@@ -45,14 +45,16 @@ fun TopSearchBar() {
 
             Icon(
                 painter = painterResource(id = R.drawable.ic_search_24dp),
-                contentDescription = "Search Icon"
+                contentDescription = "Search Icon",
+                modifier = Modifier.padding(end = 8.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             TextField(
                 value = searchQuery.value,
                 colors = TextFieldDefaults.textFieldColors(
                     unfocusedIndicatorColor = Color.Transparent,
-                    focusedIndicatorColor = Color.Transparent
+                    focusedIndicatorColor = Color.Transparent,
                 ),
                 onValueChange = {
                     searchQuery.value = it

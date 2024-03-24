@@ -21,7 +21,7 @@ fun NavGraph(
             composable("library") { LibraryFragment(navController) }
             composable("browse") { BrowseFragment() }
             composable("manga") { MangaFragment() }
-            composable("settings") { SettingsFragment() }
+            composable("settings") { SettingsFragment(navController) }
         }
     }
 }
