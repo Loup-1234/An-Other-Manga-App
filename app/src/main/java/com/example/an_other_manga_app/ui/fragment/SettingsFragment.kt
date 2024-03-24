@@ -16,7 +16,9 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -27,6 +29,8 @@ import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 @Composable
 fun SettingsFragment(navController: NavHostController) {
     AnOtherMangaAppTheme {
+        val uriHandler = LocalUriHandler.current
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -42,22 +46,24 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
                     ) {
                         Image(
                             painter = painterResource(id = R.mipmap.lifetime_showtime),
-                            contentDescription = "Extreme Violence",
+                            contentDescription = "Lifetime Showtime",
                             modifier = Modifier
+                                .clickable { navController.navigate("more_settings") }
                                 .padding(16.dp)
                                 .fillMaxSize()
+                                .align(Alignment.CenterHorizontally)
                         )
                         Text(
                             text = "Lifetime Showtime",
                             fontSize = 24.sp,
                             modifier = Modifier
+                                .clickable{ uriHandler.openUri("https://www.youtube.com/watch?v=-wzgy7uTuSk")}
                                 .padding(
                                     start = 8.dp,
                                     end = 8.dp
@@ -68,6 +74,7 @@ fun SettingsFragment(navController: NavHostController) {
                             text = "FUWAMOCO",
                             fontSize = 18.sp,
                             modifier = Modifier
+                                .clickable{ uriHandler.openUri("https://www.youtube.com/@FUWAMOCOch")}
                                 .padding(
                                     start = 8.dp,
                                     end = 8.dp,
@@ -83,7 +90,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=1")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -109,7 +116,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=15")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -133,7 +140,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=23")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -157,7 +164,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=38")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -186,7 +193,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=53")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -219,7 +226,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=77")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
@@ -244,7 +251,7 @@ fun SettingsFragment(navController: NavHostController) {
                             containerColor = MaterialTheme.colorScheme.surfaceVariant,
                         ),
                         modifier = Modifier
-                            .clickable { navController.navigate("more_settings") }
+                            .clickable{ uriHandler.openUri("https://youtu.be/-wzgy7uTuSk?t=84")}
                             .fillMaxWidth()
                             .wrapContentHeight()
                             .padding(8.dp)
