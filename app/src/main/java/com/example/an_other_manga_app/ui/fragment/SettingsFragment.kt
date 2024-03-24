@@ -45,10 +45,7 @@ fun SettingsFragment(navController: NavHostController) {
                             .clickable { navController.navigate("manga") }
                             .fillMaxWidth()
                             .wrapContentHeight()
-                            .padding(
-                                start = 8.dp,
-                                end = 8.dp,
-                            )
+                            .padding(8.dp)
                     ) {
                         Image(
                             painter = painterResource(id = R.mipmap.lifetime_showtime),
@@ -63,7 +60,7 @@ fun SettingsFragment(navController: NavHostController) {
                             modifier = Modifier
                                 .padding(
                                     start = 8.dp,
-                                    end = 8.dp,
+                                    end = 8.dp
                                 ),
                             color = MaterialTheme.colorScheme.secondary
                         )
@@ -71,7 +68,11 @@ fun SettingsFragment(navController: NavHostController) {
                             text = "FUWAMOCO",
                             fontSize = 18.sp,
                             modifier = Modifier
-                                .padding(8.dp),
+                                .padding(
+                                    start = 8.dp,
+                                    end = 8.dp,
+                                    bottom = 8.dp
+                                ),
                             color = MaterialTheme.colorScheme.secondary
                         )
                     }
