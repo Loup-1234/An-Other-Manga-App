@@ -15,7 +15,7 @@ import com.example.an_other_manga_app.R
 import com.example.an_other_manga_app.ui.theme.AnOtherMangaAppTheme
 
 @Composable
-fun MoreSettings() {
+fun MoreLifetimeShowtimeFragment() {
     AnOtherMangaAppTheme {
         Box(
             modifier = Modifier
