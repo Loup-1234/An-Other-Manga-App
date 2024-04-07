@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                     }
                 ) { contentPadding ->
                     Column(modifier = Modifier.padding(contentPadding)){
-                        NavGraph(navController = navController, contentPadding)
+                        NavGraph(navController = navController)
                     }
                 }
             }
